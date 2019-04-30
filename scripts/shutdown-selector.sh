@@ -2,8 +2,10 @@
 
 hibernate="Hibernate"
 shutdown="Shutdown"
+restart="Restart"
 suspend="Suspend"
-selected=$(echo -e "$hibernate|$shutdown|$suspend" | rofi -sep '|' -dmenu -p "Select action" -no-custom -no-fixed-num-lines)
+
+selected=$(echo -e "$hibernate|$shutdown|$suspend|$restart" | rofi -sep '|' -dmenu -p "Select action" -no-custom -no-fixed-num-lines)
 
 echo $selected
 locker=$HOME/.config/i3/lock
@@ -14,7 +16,10 @@ case $selected in
     $shutdown)
 	$locker && systemctl poweroff
 	;;
-    $suspend)
+    $suspend
 	$locker && systemctl suspend
+	;;
+    $restart
+	systemctl restart
 	;;
 esac
