@@ -16,10 +16,10 @@ case $selected in
     $shutdown)
 	$locker && systemctl poweroff
 	;;
-    $suspend
+    $suspend)
 	$locker && systemctl suspend
 	;;
-    $restart
+    $restart)
 	systemctl restart
 	;;
 esac
