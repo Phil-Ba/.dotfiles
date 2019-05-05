@@ -20,6 +20,6 @@ case $selected in
 	$locker && systemctl suspend
 	;;
     $restart)
-	systemctl restart
+	systemctl reboot
 	;;
 esac
