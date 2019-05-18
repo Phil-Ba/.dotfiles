@@ -23,7 +23,8 @@ xrandr -q | grep " connected" | while read monitor; do
   echo "moni1="$monitor
   monitor=$(echo "$monitor" | cut -d ' ' -f1)
   echo "moni2="$monitor
-  MONITOR=$monitor POLYBAR_TRAY=$tray_position polybar --reload --config=$HOME/.config/polybar/config main &
+  battery=$(ls -1 /sys/class/power_supply/ | grep BAT)
+  BATTERY=$battery MONITOR=$monitor POLYBAR_TRAY=$tray_position polybar --reload --config=$HOME/.config/polybar/config main &
 
 done
 
