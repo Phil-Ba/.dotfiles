@@ -206,7 +206,7 @@ exec --no-startup-id clipit
 #exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 20 -locker $Locker 
+#exec --no-startup-id xautolock -time 20 -locker $Locker 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -321,9 +321,9 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5%" 
-bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle" 
+#bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+#bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5%" 
+#bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle" 
 #bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume 0 +5%; notify-send 'sound up'"
 #bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume 0 -5%; notify-send 'sound down'" 
 #bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle; notify-send 'muted/unmuted'" 
