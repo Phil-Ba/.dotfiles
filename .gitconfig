@@ -3,3 +3,4 @@
 	name = phi.ba
 [alias]
 	changes = ! git ls-files -m | git diff
+	cm = commit -m
