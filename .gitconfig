@@ -1,0 +1,5 @@
+[user]
+	email = phi.ba@yandex.com
+	name = phi.ba
+[alias]
+	changes = ! git ls-files -m | git diff
