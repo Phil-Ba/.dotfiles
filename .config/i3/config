@@ -393,9 +393,10 @@ for_window [urgent=latest] focus
 
 #config screens
 bindsym $mod+shift+m mode "$mode_monitor"
-set $mode_monitor work (w), laptop (l)
+set $mode_monitor work (w), work reverse(r), laptop (l)
 mode "$mode_monitor" {
     bindsym w exec --no-startup-id $HOME/.config/.screenlayout/work-3-monitors.sh; mode "default"
+    bindsym r exec --no-startup-id $HOME/.config/.screenlayout/work-3-monitors-r.sh; mode "default"
 #    bindsym w exec --no-startup-id $HOME/.config/.screenlayout/work-3-monitors.sh; workspace $ws2 move workspace to output DVI-I-2-1, workspace $ws1 move workspace to output DVI-I-3-2, mode "default"
     bindsym l exec --no-startup-id $HOME/.config/.screenlayout/laptop-only.sh; mode "default"
 
