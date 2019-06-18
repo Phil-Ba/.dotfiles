@@ -1,0 +1,9 @@
+[user]
+	name = phi.ba
+	email = phi.ba@yandex.com
+[core]
+	autocrlf = input
+[credential]
+	helper = cache
+[includeIf "gitdir:~/IdeaProjects/tMob/"]
+	path = .gitconfig-tmob
