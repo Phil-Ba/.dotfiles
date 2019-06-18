@@ -7,3 +7,6 @@
 	helper = cache
 [includeIf "gitdir:~/IdeaProjects/tMob/"]
 	path = .gitconfig-tmob
+[alias]
+	changes = ! git ls-files -m | git diff
+	cm = commit -m

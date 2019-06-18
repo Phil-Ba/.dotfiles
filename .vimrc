@@ -30,3 +30,14 @@ set clipboard=unnamedplus
 "Wrap lines at beginng/end
 set whichwrap+=<,>,h,l,[,]
 
+"Silent command for displaying output without Enter
+command! -nargs=1 Silent
+\   execute 'silent !' . <q-args>
+\ | execute 'redraw!'
+
+"Autocommands
+:augroup Xresources
+: autocmd!
+: autocmd BufWritePost .Xresources :Silent !xrdb %:p
+:augroup END
+
