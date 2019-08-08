@@ -38,6 +38,6 @@ command! -nargs=1 Silent
 "Autocommands
 :augroup Xresources
 : autocmd!
-: autocmd BufWritePost .Xresources :Silent !xrdb %:p
+: autocmd BufWritePost .Xresources :Silent xrdb %:p
 :augroup END
 
