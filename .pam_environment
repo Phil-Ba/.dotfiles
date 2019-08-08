@@ -1,0 +1,4 @@
+SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+EDITOR=/usr/bin/vim
+VISUAL=/usr/bin/gvim
+JAVA_HOME=/usr/lib/jvm/default
