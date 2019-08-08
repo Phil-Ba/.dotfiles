@@ -275,7 +275,7 @@ ramp-load-7 = █
 ramp-load-7-font = 2
 ramp-load-7-foreground = #ff5555
 #label = %percentage:2%%
-label = %{A1:gnome-system-monitor:}%percentage%%%{A}
+label = %{A1:htop:}%percentage%%%{A}
 
 [module/memory]
 type = internal/memory
@@ -416,7 +416,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/battery]
 type = internal/battery
 battery = ${env:BATTERY}
-adapter = AC
+adapter = ${env:AC}
 full-at = 95
 time-format = %H:%M
 format-charging = <animation-charging> <label-charging>
@@ -434,7 +434,7 @@ format-full-underline = #10ff00
 ;   %percentage% (default)
 ;   %time%
 ;   %consumption% (shows current discharge rate in watts)
-label-discharging = DSC %percentage%%(%time%)
+label-discharging = DSC %percentage_raw%%(%time%)
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
