@@ -169,10 +169,10 @@ mode "resize" {
 }
 
 #config shutdowns
-set $Locker ~/.config/i3/lock 
+set $Locker ~/scripts/lock 
 bindsym $mod+r mode "resize"
 #shutdown menu
-bindsym $mod+shift+End exec --no-startup-id ~/scripts/shutdown-selector.sh
+bindsym $mod+shift+End exec --no-startup-id ~/scripts/shutdown-selector
 ##copies from manj-skel
 # Lock screen
 bindsym $mod+p exec --no-startup-id $Locker

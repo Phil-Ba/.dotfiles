@@ -275,7 +275,7 @@ ramp-load-7 = █
 ramp-load-7-font = 2
 ramp-load-7-foreground = #ff5555
 #label = %percentage:2%%
-label = %{A1:htop:}%percentage%%%{A}
+label = %{A1:terminal -e htop:}%percentage%%%{A}
 
 [module/memory]
 type = internal/memory
@@ -480,7 +480,7 @@ expand-right = false
 
 format-spacing = 1
 
-label-open = "%{A1:~/scripts/shutdown-selector.sh:}%{A}"
+label-open = "%{A1:~/scripts/shutdown-selector:}%{A}"
 label-open-foreground = ${colors.secondary}
 #label-close =  cancel
 #label-close-foreground = ${colors.secondary}
