@@ -1,5 +1,5 @@
 " General
-set number	" Show line numbers
+set relativenumber number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++ 	" Wrap-broken line prefix
 set textwidth=140	" Line wrap (number of cols)
@@ -35,9 +35,19 @@ command! -nargs=1 Silent
 \   execute 'silent !' . <q-args>
 \ | execute 'redraw!'
 
+let g:rehash256 = 1
+let g:Powerline_symbols='unicode'
+let g:Powerline_theme='long'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='angr'
+
 "Autocommands
 :augroup Xresources
 : autocmd!
 : autocmd BufWritePost .Xresources :Silent xrdb %:p
 :augroup END
 
+"Maps
+noremap x "_x
