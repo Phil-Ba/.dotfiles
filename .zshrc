@@ -27,7 +27,10 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+# vim stuff
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -a '^[[3~' delete-char
 
 #source scripts/colors.sh
 
