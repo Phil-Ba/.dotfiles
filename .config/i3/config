@@ -177,7 +177,7 @@ bindsym $mod+shift+End exec --no-startup-id ~/scripts/shutdown-selector
 # Lock screen
 bindsym $mod+p exec --no-startup-id $Locker
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 3
+new_window normal 3
 new_float normal
 # change borders
 bindsym $mod+u border none
