@@ -1,0 +1,6 @@
+#!/bin/bash
+$1 &>/dev/null &
+pid=$!
+disown $pid
+echo "[$pid]"
+
