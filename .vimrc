@@ -51,3 +51,4 @@ let g:airline_theme='angr'
 
 "Maps
 noremap x "_x
+imap jj <Esc>
