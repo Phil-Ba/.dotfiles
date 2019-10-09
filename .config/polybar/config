@@ -275,7 +275,8 @@ ramp-load-7 = █
 ramp-load-7-font = 2
 ramp-load-7-foreground = #ff5555
 #label = %percentage:2%%
-label = %{A1:terminal -e htop:}%percentage%%%{A}
+#label = %{A1:${env:TERMCMD} -e htop:}%percentage%%%{A}
+label = ${env:HTOP_ACTION}
 
 [module/memory]
 type = internal/memory
