@@ -3,6 +3,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
+setopt glob_complete
+
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -34,6 +36,7 @@ zle -N zle-keymap-select
 # vim stuff
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -a '^[[3~' delete-char
+bindkey '^[[3~' backward-delete-char
 bindkey "^?" backward-delete-char
 
 #source scripts/colors.sh
