@@ -75,7 +75,7 @@ bindsym $mod+Mod1+Left move workspace to output left
 bindsym $mod+Mod1+Right move workspace to output right
 
 # split in horizontal orientation
-bindsym $mod+Control+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+Ctrl+h split h;exec notify-send 'tile horizontally'
 # split in vertical orientation
 bindsym $mod+v split v;exec notify-send 'tile vertically'
 
