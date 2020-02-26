@@ -36,7 +36,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 focus_follows_mouse no
-
+focus_wrapping active
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -56,6 +56,26 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+# move floating windows with keys
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+    bindsym $mod+Tab focus right
+
+    bindsym Left  move left
+    bindsym Down  move down
+    bindsym Up    move up
+    bindsym Right move right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -248,7 +268,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 #  client.focused          #556064 #556064 #80FFF9 #FDF6E3
   client.focused          #1c5959 #339999 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #287676 #1ABC9C #454948
-  client.unfocused        #1e2f38 #2F3D44 #1ABC9C #454948
+  client.unfocused        #788287 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
 
