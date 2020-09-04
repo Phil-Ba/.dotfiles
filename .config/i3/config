@@ -36,7 +36,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 focus_follows_mouse no
-focus_wrapping active
+focus_wrapping workspace
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -44,7 +44,7 @@ focus_wrapping active
 # installed.
 #
 #bindsym $mod+d exec "j4-dmenu-desktop --dmenu=\\"(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu\\""
-bindsym $mod+d exec "rofi -modi run,drun -show drun -line-padding 4 \-columns 2 -padding 50 -hide-scrollbar \-show-icons -drun-icon-theme \\"ArchLabs-Light\\""
+bindsym $mod+d exec "rofi -modi run,drun,window -show drun -line-padding 4 \-columns 2 -padding 50 -hide-scrollbar \-show-icons -drun-icon-theme \\"ArchLabs-Light\\""
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -89,10 +89,13 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-
 # Move workspace to output
 bindsym $mod+Mod1+Left move workspace to output left
 bindsym $mod+Mod1+Right move workspace to output right
+
+# Move focus to output
+bindsym $mod+Ctrl+Left focus output left
+bindsym $mod+Ctrl+Right focus output right
 
 # split in horizontal orientation
 bindsym $mod+Ctrl+h split h;exec notify-send 'tile horizontally'
@@ -226,7 +229,7 @@ exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 #exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+#exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 #exec --no-startup-id xautolock -time 20 -locker $Locker 
 exec_always --no-startup-id ff-theme-util
@@ -356,8 +359,9 @@ bindsym XF86AudioPrev exec playerctl previous
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
-exec --no-startup-id xfce4-volumed-pulse 
-exec --no-startup-id volumeicon
+#exec --no-startup-id xfce4-volumed-pulse 
+#exec --no-startup-id volumeicon
+exec --no-startup-id pasystray
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -402,8 +406,8 @@ for_window [class="jetbrains-idea" title="win10"] floating enable sticky enable
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
 
 #navigate workspaces next / previous
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
+#bindsym $mod+Ctrl+Right workspace next
+#bindsym $mod+Ctrl+Left workspace prev
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
