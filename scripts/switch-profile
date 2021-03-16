@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+cardAndProfile=$(pactl list sinks short | grep -i bluez |  awk '{ print $2 }')
+IFS='.' read -r -a split <<< "$cardAndProfile"
+card="bluez_card.${split[1]}"
+profile="${split[2]}"
+
+if [[ "$profile" == "a2dp_sink" ]]; then
+  newProfile="headset_head_unit"
+else
+  newProfile="a2dp_sink"
+fi
+if [[ "$1" == "-d" ]]; then
+  echo cardAndProfile: $cardAndProfile
+  echo card: $card
+  echo profile: $profile
+  echo newProfile: $newProfile
+fi
+pacmd set-card-profile "$card" "$newProfile"

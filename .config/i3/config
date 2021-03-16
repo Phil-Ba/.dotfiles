@@ -191,8 +191,11 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-#config shutdowns
+#custom commands
 set $Locker ~/scripts/lock 
+bindsym $mod+shift+p exec --no-startup-id ~/scripts/switch-profile
+
+#config shutdowns
 bindsym $mod+r mode "resize"
 #shutdown menu
 bindsym $mod+shift+End exec --no-startup-id ~/scripts/shutdown-selector
